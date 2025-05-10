@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Landslide Risk Prediction System</h1>
+        
+        <a href="/predict" class="btn btn-light btn-lg mt-3">Try Prediction Tool</a>
+    </div>
+</section>
+
+<section class="container my-5">
+    <div class="row g-4">
+    
+      <div class="col-md-4">
+        <div class="card h-100 p-4 text-center">
+          <div class="feature-icon">
+          </div>
+          <h3>Landslide Causes & Prevention</h3>
+          <p>Causes: Heavy rainfall, earthquakes, deforestation, and steep slopes weaken soil stability, triggering landslides. Human activities like mining or construction can increase risks.</p>
+
+           <p> Avoidance: Monitor weather alerts, avoid construction on unstable hillsides, plant trees to reinforce soil, and build proper drainage systems. Stay away from steep areas during storms..</p>
+        </div>
+      </div>
+  
+      <!-- Image Slider in Center Column -->
+     
+<div class="col-md-4">
+    <div class="card h-100 p-4 text-center d-flex flex-column justify-content-center align-items-center">
+      <div class="slider-container w-100" style="aspect-ratio: 2 / 1;">
+        <div class="slider" id="imageSlider">
+          <img src="{{ url_for('static', filename='image1.jpg') }}" alt="Image 1">
+          <img src="{{ url_for('static', filename='image2.jpg') }}" alt="Image 2">
+          <img src="{{ url_for('static', filename='image3.jpg') }}" alt="Image 3">
+        </div>
+        <button class="nav prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="nav next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+    </div>
+  </div>
+  
+      <!-- Risk Prediction -->
+      <div class="col-md-4">
+        <div class="card h-100 p-4 text-center">
+          <div class="feature-icon">
+            <i class="bi bi-shield-exclamation"></i>
+          </div>
+          <h3>Risk Prediction</h3>
+          <p>Get instant risk assessments using our machine learning model.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="container my-5">
+    <h2 class="text-center mb-4">How It Works</h2>
+    <div class="row">
+        <div class="col-lg-6">
+            <video width="100%" controls autoplay muted loop>
+                <source src="{{ url_for('static', filename='Landslide_video.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+      
+        </div>
+        <div class="col-lg-6">
+            
+            <p>Simply enter the current environmental conditions in your area, and our system will provide a risk assessment with probability estimates.</p>
+            <ul>
+                <li>Temperature (°C)</li>
+                <li>Humidity (%)</li>
+                <li>Precipitation (mm)</li>
+                <li>Soil Moisture (%)</li>
+                <li>Elevation (m)</li>
+            </ul>
+            <a href="/predict" class="btn btn-primary">Try It Now</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

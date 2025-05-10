@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center mb-4">About the Landslide Risk Prediction System</h1>
+    
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3><i class="bi bi-info-circle"></i> Project Overview</h3>
+                    <p>This system was developed to help predict landslide risks using machine learning algorithms. It analyzes environmental factors that contribute to landslides and provides risk assessments.</p>
+                    <p>The model was trained on historical landslide data with the following features:</p>
+                    <ul>
+                        <li>Temperature</li>
+                        <li>Humidity</li>
+                        <li>Precipitation</li>
+                        <li>Soil Moisture</li>
+                        <li>Elevation</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3><i class="bi bi-diagram-3"></i> Technology Stack</h3>
+                    <ul>
+                        <li><strong>Machine Learning:</strong> Random Forest Classifier (Scikit-learn)</li>
+                        <li><strong>Backend:</strong> Python, Flask</li>
+                        <li><strong>Frontend:</strong> HTML5, CSS3, Bootstrap 5</li>
+                        <li><strong>Visualization:</strong> Matplotlib</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3><i class="bi bi-people"></i> Team</h3>
+                    <p>This project was developed by a team dedicated to using technology for natural disaster prevention.</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="flex-shrink-0">
+                            <i class="bi bi-person-circle" style="font-size: 2rem;"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="mt-0">Project Lead</h5>
+                            <p class="mb-0">Neeraj Sumrit</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-body">
+                    <h3><i class="bi bi-envelope"></i> Contact Us</h3>
+                    <p>For questions or feedback about the system, please contact us:</p>
+                    <p><i class="bi bi-envelope"></i> @landslideaprediction.com</p>
+                    <p><i class="bi bi-telephone"></i> 99999999</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
